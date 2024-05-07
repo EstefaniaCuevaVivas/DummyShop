@@ -1,1 +1,11 @@
-<p>header works!</p>
+
+<nav *ngIf="loginService.isLoggedIn">
+    <div class="links">
+        <a routerLink="/home" routerLinkActive="active-link">Home</a>
+        <a routerLink="/Favourites" routerLinkActive="active-link">Favourites</a>
+    </div>
+ 
+    <button class="logOut" (click)="openModal()">Log out</button>
+    <app-modal-log-out *ngIf="showModal" (accept)="confirmLogout()" (close)="closeModal()"></app-modal-log-out>
+    
+</nav>

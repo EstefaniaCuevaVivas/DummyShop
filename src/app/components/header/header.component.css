@@ -1,0 +1,30 @@
+nav{
+    height: 8vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+     /* border: 2px solid red; */
+     width: 300px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.links a{
+    color: white;
+    text-decoration: none;
+}
+
+
+button{
+    border: none;
+    /* border-radius: 3px; */
+    width: 200px;
+    background-color: transparent;
+    color: white;
+}
+
+

@@ -9,6 +9,8 @@ import { ModalLogOutComponent } from './components/modal-log-out/modal-log-out.c
 import { HomeComponent } from './pages/home/home.component';
 import { FavouritesComponent } from './pages/favourites/favourites.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LoginComponent } from './pages/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

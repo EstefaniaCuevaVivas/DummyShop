@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="container">
+    <h1>Dummy Shop Log In</h1>
+    <form [formGroup]="myForm">
+
+
+        <div class="inputs">
+            <input type="text" class="form-control" formControlName="username" placeholder="username"
+                [ngClass]="{'is-invalid': (myForm.get('username').dirty || myForm.get('username').touched) && !myForm.get('username').valid}" />
+            <div *ngIf="!myForm.get('username').valid" class="invalid-feedback">
+                <div *ngIf="myForm.get('username').errors?.['required']">username is required</div>
+            </div>
+
+            <input type="password" class="form-control" formControlName="password" placeholder="contraseña"
+                [ngClass]="{'is-invalid': (myForm.get('password').dirty || myForm.get('password').touched) && !myForm.get('password').valid}" />
+            <div *ngIf="!myForm.get('password').valid" class="invalid-feedback">
+                <div *ngIf="myForm.get('password').errors?.['required']">password is required</div>
+                <div *ngIf="myForm.get('password').errors?.['minlength']">password must contain 8 characters</div>
+
+            </div>
+
+            <div class="invalid-feedback" *ngIf="loginError">
+                <p class="invalid-feedback">Incorrect credentials. Please try again.</p>
+              </div>
+
+            <button type="submit" (click)="login()" [disabled]="myForm.invalid">Login</button>
+        </div>
+    </form>
+</div>

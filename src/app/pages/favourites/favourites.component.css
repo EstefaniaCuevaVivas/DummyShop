@@ -1,0 +1,21 @@
+body{
+    height: 92vh;
+    background-color: rgb(186, 185, 185);
+    display: flex;
+    justify-content: center;
+}
+
+
+body div{
+    width: 100%;
+    min-height: 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+}

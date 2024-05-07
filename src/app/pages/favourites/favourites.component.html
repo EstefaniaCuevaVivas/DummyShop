@@ -1,1 +1,9 @@
-<p>favourites works!</p>
+<body>
+    <div >
+        <ng-container *ngFor="let favorite of favorites">
+             <app-card [card]="favorite" (likesCard)="removeFromFavorites($event)"></app-card>
+        </ng-container>     
+       
+    </div>
+</body>
+
